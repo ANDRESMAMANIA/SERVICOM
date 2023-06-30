@@ -147,34 +147,47 @@ session_start();
 
    <?php
    if (isset($_SESSION['IniciarSesion']) && $_SESSION['IniciarSesion'] == "ok") {
-
       echo '<div class="wrapper">';
       include "modulos/cabezote.php";
       include "modulos/menu.php";
 
-
       if (isset($_GET["ruta"])) {
+         $ruta = $_GET["ruta"]; // Almacenar la ruta en una variable para evitar repetición de código
 
-         if (
-            $_GET["ruta"] == "inicio" ||
-            $_GET["ruta"] == "usuarios" ||
-            $_GET["ruta"] == "clientes" ||
-            $_GET["ruta"] == "equipo" ||
-            $_GET["ruta"] == "materiales" ||
-            $_GET["ruta"] == "registroequipo" ||
-            $_GET["ruta"] == "crearRegistroEquipo" ||
+         // Utilizar la estructura switch en lugar de múltiples if para una mejor legibilidad
+         switch ($ruta) {
+            case "inicio":
+            case "usuarios":
+            case "clientes":
+               include "modulos/" . $ruta . ".php";
+               break;
 
+            case "ingresoequipo":
+            case "marca":
+            case "tipoequipo":
+               include "modulos/equipos/" . $ruta . ".php";
+               break;
 
-            $_GET["ruta"] == "salir"
-         ) {
+            case "repuesto":
+            case "repuestoventa":
+               include "modulos/repuestos/" . $ruta . ".php";
+               break;
 
-            include "modulos/" . $_GET["ruta"] . ".php";
-         } else {
+            case "servicio":
+            case "servicioventa":
+               include "modulos/servicios/" . $ruta . ".php";
+               break;
 
-            include "modulos/404.php";
+            case "salir":
+               // Manejar "salir" de manera diferente si es necesario
+               // Puedes agregar el código correspondiente aquí
+               break;
+
+            default:
+               include "modulos/404.php";
+               break;
          }
       } else {
-
          include "modulos/inicio.php";
       }
 
@@ -182,8 +195,8 @@ session_start();
    } else {
       include "modulos/login.php";
    }
-
    ?>
+
 
    <!-- ./wrapper -->
 

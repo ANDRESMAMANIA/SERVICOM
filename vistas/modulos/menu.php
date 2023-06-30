@@ -59,30 +59,74 @@
                   </p>
                </a>
             </li>
+
+            <!-- INGRESO Y REGISTRO DE EQUIPOS -->
+
             <li class="nav-item">
-               <a href="materiales" class="nav-link">
-                  <i class="fa fa-user-circle"></i>
+               <a href="ingresoequipo" class="nav-link">
+                  <i class="fas fa-file-medical"></i>
                   <p>
-                     MATERIALES
+                     INGRESO DE EQUIPOS
+                  </p>
+               </a>
+            </li>
+
+            <li class="nav-item">
+               <a href="marca" class="nav-link">
+                  <i class="fas fa-file-medical"></i>
+                  <p>
+                     MARCAS
+                  </p>
+               </a>
+            </li>
+
+            <li class="nav-item">
+               <a href="tipoequipo" class="nav-link">
+                  <i class="fas fa-file-medical"></i>
+                  <p>
+                     TIPOS DE EQUIPOS
+                  </p>
+               </a>
+            </li>
+
+            <!-- REGISTRO Y VENTA DE REPUESTOS -->
+
+            <li class="nav-item">
+               <a href="repuesto" class="nav-link">
+                  <i class="fas fa-file-medical"></i>
+                  <p>
+                     REPUESTOS
                   </p>
                </a>
             </li>
             <li class="nav-item">
-               <a href="registroequipo" class="nav-link">
-                  <i class="fas fa-laptop-medical"></i>
+               <a href="repuestoventa" class="nav-link">
+                  <i class="fas fa-file-medical"></i>
                   <p>
-                     REGISTRO DE EQUIPOS
+                     VENTA DE REPUESTO
+                  </p>
+               </a>
+            </li>
+
+            <!-- REGISTRO Y VENTA DE SERVICIOS -->
+
+            <li class="nav-item">
+               <a href="servicio" class="nav-link">
+                  <i class="fas fa-file-medical"></i>
+                  <p>
+                     REPUESTOS
                   </p>
                </a>
             </li>
             <li class="nav-item">
-               <a href="crearRegistroEquipo" class="nav-link">
-                  <i class="fas fa-laptop-medical"></i>
+               <a href="servicioventa" class="nav-link">
+                  <i class="fas fa-file-medical"></i>
                   <p>
-                     Crear registro
+                     VENTA DE REPUESTO
                   </p>
                </a>
             </li>
+
          </ul>
       </nav>
       <!-- /.sidebar-menu -->
